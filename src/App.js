@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Container, Navbar} from 'react-bootstrap';
+import ContactsForm from './components/ContactsForm';
+import Questions from './components/Questions';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Navbar bg="light" className="my-5">
+        <Container>
+          <Navbar.Brand href="#home">Kontaktų forma</Navbar.Brand>
+        </Container>
+      </Navbar>
+      <ContactsForm/>
+
+      <Navbar bg="light" className="my-5">
+        <Container>
+          <Navbar.Brand href="#home">Klientų užklausos</Navbar.Brand>
+        </Container>
+      </Navbar>
+    
+      <Questions/>
+    </Container>
   );
 }
 
